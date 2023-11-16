@@ -25,17 +25,28 @@ $method = $_SERVER['REQUEST_METHOD'];
 // Assuming you have a database connection, you can now fetch data from the 'pokedex' table
 if ($method === 'GET') {
     try {
-        // Assuming you are using PDO for database access
-        $sql = "SELECT * FROM pokedex";
+        // Fetch all pokemons
+        $sql = "SELECT * FROM pokedex inner JOIN stats on pkm_id=id";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
         // Fetch the data as an associative array
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        if (isset($_GET['name'])) {
+            $name=$_GET['name'];
+
+            $stmt2 = $pdo->prepare("SELECT * FROM pokedex INNER JOIN STATS ON pkm_id=id WHERE pkmName=:pkname");
+            $stmt2->bindParam(':pkname',$name);
+            $stmt2->execute();
+            $SelectedPkmData=$stmt2->fetchAll(PDO::FETCH_ASSOC);
+        }
+
     } catch (PDOException $e) {
         // Handle the case where the query fails
         echo "Error: " . $e->getMessage();
+    } {
+
     }
 
 }
