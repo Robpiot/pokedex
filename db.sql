@@ -5,7 +5,7 @@ USE poketrash;
 CREATE TABLE `pokedex` (
   `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `pkmName` VARCHAR(255) NOT NULL,
-  `type1` VARCHAR(255) NOT NULL,
+  `type1` VARCHAR(255),
   `type2` VARCHAR(255),
   `evolution1` SMALLINT,
   `evolution2` SMALLINT,
