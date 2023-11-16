@@ -30,7 +30,7 @@ CREATE TABLE `profile` (
 );
 
 INSERT INTO `users` (`id`,`username`,`password`,`email`)
-VALUES ('1','DracaufeuDu69','SouleveurDeTortank','Sachatte@gmail.com')
+VALUES ('1','DracaufeuDu69','SouleveurDeTortank','Sachatte@gmail.com');
 
 INSERT INTO `pokedex` (`id`,`pkmName`,`type1`,`type2`,`evolution1`,`evolution2`,`bio`,`img`)
 VALUES ('1','Bulbizarre','Plante','Poison','2','3',"Bulbizarre est un petit Pokémon quadrupède vert. Il possède une grande fleur sur le dos qui grandit en même temps que lui. Ses yeux sont toujours fermés, et il est endormi la plupart du temps. Il possède une queue courte et épaisse. Ses pattes sont munies de trois griffes. Il possède une tache jaune sur le ventre. Il est le premier Pokémon du Pokédex de Kanto.",'https://www.pokepedia.fr/images/thumb/2/21/Bulbizarre-RFVF.png/250px-Bulbizarre-RFVF.png'),
