@@ -36,11 +36,28 @@ if ($method === 'GET') {
         if (isset($_GET['name'])) {
             $name=$_GET['name'];
 
-            $stmt2 = $pdo->prepare("SELECT * FROM pokedex INNER JOIN STATS ON pkm_id=id WHERE pkmName=:pkname");
-            $stmt2->bindParam(':pkname',$name);
+            $stmt2 = $pdo->prepare("SELECT * FROM pokedex INNER JOIN STATS ON pkm_id=id WHERE pkmName=:pkmName");
+            $stmt2->bindParam(':pkmName', $name);
             $stmt2->execute();
-            $SelectedPkmData=$stmt2->fetchAll(PDO::FETCH_ASSOC);
+            $SelectedPkmData=$stmt2->fetch(PDO::FETCH_ASSOC);
         }
+
+        // Get the evolution1 data to display it
+    if (!empty($SelectedPkmData['evolution1'])) {
+        $stmtEvolution1 = $pdo->prepare("SELECT * FROM pokedex WHERE id = :evolution1");
+        $stmtEvolution1->bindParam(':evolution1', $SelectedPkmData['evolution1']);
+        $stmtEvolution1->execute();
+        $evolution1Data = $stmtEvolution1->fetch(PDO::FETCH_ASSOC);
+    }
+    
+         // Get the evolution2 data to display it
+    if (!empty($SelectedPkmData['evolution2'])) {
+        $stmtEvolution2 = $pdo->prepare("SELECT * FROM pokedex WHERE id = :evolution2");
+        $stmtEvolution2->bindParam(':evolution2', $SelectedPkmData['evolution2']);
+        $stmtEvolution2->execute();
+        $evolution2Data = $stmtEvolution2->fetch(PDO::FETCH_ASSOC);
+    }
+
 
     } catch (PDOException $e) {
         // Handle the case where the query fails
