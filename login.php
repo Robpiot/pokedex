@@ -6,6 +6,13 @@
   <title>Login Page</title>
 </head>
 <body>
+<nav>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="login.php">Login</a></li>
+      <li><a href="signin.php">Register</a></li>
+    </ul>
+  </nav>
   <form method="POST" action="login.php">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
