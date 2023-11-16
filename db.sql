@@ -9,8 +9,8 @@ CREATE TABLE `pokedex` (
   `type2` VARCHAR(255),
   `evolution1` SMALLINT,
   `evolution2` SMALLINT,
-  `bio` VARCHAR(65535) NOT NULL,
-  `img` VARCHAR(255) NOT NULL,
+  `bio` MEDIUMTEXT,
+  `img` VARCHAR(255),
   PRIMARY KEY (Id)
 );
 
@@ -23,8 +23,8 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `profile` (
-  `avatar` VARCHAR(255) NOT NULL,
-  `bio` VARCHAR(65535) NOT NULL,
+  `avatar` VARCHAR(255),
+  `bio` MEDIUMTEXT,
   `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (Id)
 );
