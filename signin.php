@@ -1,3 +1,8 @@
+<?php error_reporting(E_ALL);
+ini_set("display_errors", 1);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +18,7 @@
       <li><a href="signin.php">Register</a></li>
     </ul>
   </nav>
-  <form method="POST" action="register.php">
+  <form method="POST" action="signin.php">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
 
@@ -24,6 +29,7 @@
     <input type="password" id="password" name="password" required>
 
     <button type="submit">Register</button>
+    <? include 'scriptsphp/createUser.php'; ?>
   </form>
 </body>
 </html>
