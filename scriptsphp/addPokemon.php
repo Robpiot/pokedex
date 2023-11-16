@@ -8,8 +8,8 @@ try {
         $type1 = $_POST['type1'];
         $type2 = $_POST['type2'] ?? null; // If type2 is not set or is null, it will be set to null
         $bio = $_POST['bio'];
-        $evolution1 = $_POST['evolution1'] ?? null; // If evolution1 is not set or is null, it will be set to null
-        $evolution2 = $_POST['evolution2'] ?? null; // If evolution2 is not set or is null, it will be set to null
+        $evolution1 = !empty($_POST['evolution1']) ? $_POST['evolution1'] : 0; 
+$evolution2 = !empty($_POST['evolution2']) ? $_POST['evolution2'] : 0;
         $img = $_POST['img'] ?? null;
 
         $stmt = $pdo->prepare("INSERT INTO pokedex (pkmName, id, type1, type2, bio, evolution1, evolution2, img) VALUES (:pkmName, :id, :type1, :type2, :bio, :evolution1, :evolution2, :img)");
