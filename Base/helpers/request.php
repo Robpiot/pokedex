@@ -1,10 +1,6 @@
 <?php
 require '../connect.php';
 
-$stmt = $pdo->prepare('SELECT * FROM pokedex');
-$stmt->execute();
-$pkm = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// Check if the 'url' function does not already exist
 if (!function_exists('url')) {
 
     // Define a new 'url' function that takes a string parameter and returns the parsed URL
@@ -24,8 +20,7 @@ $url = url($_SERVER['REQUEST_URI']);
 // Get the request method (e.g., GET, POST) from the server environment
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Include the file for establishing a database connection
-include('../../connect.php'); // Assuming 'db_connection.php' is in the same directory
+
 
 // Assuming you have a database connection, you can now fetch data from the 'pokedex' table
 if ($method === 'GET') {
