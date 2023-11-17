@@ -23,3 +23,24 @@ $url = url($_SERVER['REQUEST_URI']);
 
 // Get the request method (e.g., GET, POST) from the server environment
 $method = $_SERVER['REQUEST_METHOD'];
+
+// Include the file for establishing a database connection
+include('../../connect.php'); // Assuming 'db_connection.php' is in the same directory
+
+// Assuming you have a database connection, you can now fetch data from the 'pokedex' table
+if ($method === 'GET') {
+    try {
+        // Assuming you are using PDO for database access
+        $sql = "SELECT * FROM pokedex";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+        // Fetch the data as an associative array
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
+        // Handle the case where the query fails
+        echo "Error: " . $e->getMessage();
+    }
+
+}
