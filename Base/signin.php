@@ -1,4 +1,4 @@
-<?php require './connect.php';
+<?php require './connect.php'; 
 
 // Get the data from the form
 try {
@@ -34,7 +34,7 @@ try {
 <body>
   <nav>
     <ul>
-      <li><a href="index.php">Home</a></li>
+      <li><a href="../index.php">Home</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="signin.php">Register</a></li>
     </ul>

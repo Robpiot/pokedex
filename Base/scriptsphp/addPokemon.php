@@ -1,5 +1,5 @@
 <?php
-require './connect.php';
+require './Base/connect.php';
 
 try {
     if (isset($_POST['send'])) {

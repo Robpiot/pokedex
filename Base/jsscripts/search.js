@@ -11,3 +11,5 @@ searchInput.addEventListener("input", (e) => {
     pokemon.element.classList.toggle("hide", !isVisible);
   });
 });
+
+fetch(".../connect.php");

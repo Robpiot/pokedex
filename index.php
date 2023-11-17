@@ -16,10 +16,11 @@ ini_set("display_errors", 1);
 <body>
   <nav>
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="login.php">Login</a></li>
-      <li><a href="signin.php">Register</a></li>
-      <li><form method='post' action="index.php"><input type="text" name="search" placeholder="Search..." id="search"></form></li>
+      <li><a href="./index.php">Home</a></li>
+      <li><a href="./Base/login.php">Login</a></li>
+      <li><a href="./Base/signin.php">Register</a></li>
+      <li><a href="./Base/views/index.php">mes couilles</a></li>
+      <li><input type="search" id="search"></li>
     </ul>
   </nav>
   <h1>Welcome to my Pokedex!</h1>
@@ -55,7 +56,15 @@ ini_set("display_errors", 1);
 
   <label for="send"></label>
     <input type="submit" id="send" name="send" value="Register">
-    <?php require './scriptsphp/addPokemon.php'; ?>
+    <?php require './Base/scriptsphp/addPokemon.php'; ?>
 </form>
+
+<section class ='pokedex'>
+  <div class="display-cards">
+    <div class="cards"></div>
+  </div>
+
+
+</section
 </body>
 </html>

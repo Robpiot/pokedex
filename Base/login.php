@@ -12,7 +12,7 @@ ini_set("display_errors", 1); ?>
 <body>
 <nav>
     <ul>
-      <li><a href="index.php">Home</a></li>
+      <li><a href="../index.php">Home</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="signin.php">Register</a></li>
     </ul>
