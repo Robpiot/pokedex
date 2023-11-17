@@ -1,47 +1,60 @@
 <?php
-// Simple Router
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
-// Include the helper file for handling requests
-require_once __DIR__.'/helpers/request.php';
+?>
 
-// Switch statement to handle different routes based on the path from the URL
-switch($url['path'])
-{
-    // Case: Root path '/'
-    case '/':
-        // Check if the HTTP method is GET
-        if($method == 'GET') {
-            // Include the 'views/index.php' file for the root path
-            require 'controllers/PokedexController.php';
-            index();
-        }
-        break;
 
-    // Case: Handle other paths
-    case '/pokemon':
-        // Check if the HTTP method is GET
-        if($method == 'GET') {
-            // Parse the query string of the URL and store the result in the 'result' array
-            parse_str($url['query'], $result);
-            // Check if the 'pokemon' parameter is set in the query string
-            if(isset($result['name']) && !empty($result['name'])) {
-                
-                // If 'pokemon' parameter is set, include the 'views/show.php' file
-                require 'views/show.php';
-            } else {
-                // If 'pokemon' parameter is not set, include the 'views/errors/404.php' file
-                require 'views/errors/404.php';
-                // Set HTTP response code to 404 Not Found
-                http_response_code(404);
-            }
-        }
-        break;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="login.php">Login</a></li>
+      <li><a href="signin.php">Register</a></li>
+      <li><form method='post' action="index.php"><input type="text" name="search" placeholder="Search..."></form></li>
+    </ul>
+  </nav>
+  <h1>Welcome to my Pokedex!</h1>
+  <p>Here's where I keep track of all my Pokemon.</p>
 
-    // Default case: Handle all other paths
-    default:
-        // Include the 'views/errors/404.php' file for unknown paths
-        require 'views/errors/404.php';
-        // Set HTTP response code to 404 Not Found
-        http_response_code(404);
-        break;
-}
+
+
+
+  <form method="POST" action="index.php">
+  <label for="pkmName">Pokemon Name:</label>
+  <input type="text" id="pkmName" name="pkmName" required>
+
+  <label for="id">Pokemon ID:</label>
+  <input type="number" id="id" name="id" required>
+
+  <label for="type1">Pokemon Type:</label>
+  <input type="text" id="type1" name="type1" required>
+
+  <label for="type2"> Pokemon Type 2:</label>
+  <input type="text" id="type2" name="type2">
+
+  <label for="bio">Pokemon Bio:</label>
+  <textarea id="bio" name="bio" required></textarea>
+
+  <label for="evolution1">First Evolution id:</label>
+  <input type="number" id="evolution1" name="evolution1">
+
+  <label for="evolution2">Second Evolution id:</label>
+  <input type="number" id="evolution2" name="evolution2">
+
+  <label for="img">Pokemon Image:</label>
+  <input type="text" id="img" name="img">
+
+  <label for="send"></label>
+    <input type="submit" id="send" name="send" value="Register">
+    <?php require './scriptsphp/addPokemon.php'; ?>
+</form>
+</body>
+</html>
