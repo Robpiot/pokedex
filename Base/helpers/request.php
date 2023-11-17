@@ -26,16 +26,14 @@ $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'GET') {
     try {
         // Assuming you are using PDO for database access
-        $sql = "SELECT * FROM pokedex";
+        $sql = "SELECT * FROM pokedex INNER JOIN stats on pkm_id=id";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
         // Fetch the data as an associative array
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
     } catch (PDOException $e) {
         // Handle the case where the query fails
         echo "Error: " . $e->getMessage();
     }
-
 }
