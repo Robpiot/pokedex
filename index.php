@@ -10,6 +10,7 @@ ini_set("display_errors", 1);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="./jsscripts/search.js"></script>
   <title>Pokedex</title>
 </head>
 <body>
@@ -18,7 +19,7 @@ ini_set("display_errors", 1);
       <li><a href="index.php">Home</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="signin.php">Register</a></li>
-      <li><form method='post' action="index.php"><input type="text" name="search" placeholder="Search..."></form></li>
+      <li><form method='post' action="index.php"><input type="text" name="search" placeholder="Search..." id="search"></form></li>
     </ul>
   </nav>
   <h1>Welcome to my Pokedex!</h1>
