@@ -1,5 +1,9 @@
 <?php
+require '../connect.php';
 
+$stmt = $pdo->prepare('SELECT * FROM pokedex');
+$stmt->execute();
+$pkm = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Check if the 'url' function does not already exist
 if (!function_exists('url')) {
 
@@ -9,7 +13,6 @@ if (!function_exists('url')) {
         // Use the 'parse_url' function to parse the provided URL and return the result
         return parse_url($request);
     }
-
 }
 
 // Initialize an empty array to store the parsed query parameters
