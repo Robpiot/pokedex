@@ -18,10 +18,14 @@ ini_set("display_errors", 1);
       <li><a href="index.php">Home</a></li>
       <li><a href="login.php">Login</a></li>
       <li><a href="signin.php">Register</a></li>
+      <li><form method='post' action="index.php"><input type="text" name="search" placeholder="Search..."></form></li>
     </ul>
   </nav>
   <h1>Welcome to my Pokedex!</h1>
   <p>Here's where I keep track of all my Pokemon.</p>
+
+
+
 
   <form method="POST" action="index.php">
   <label for="pkmName">Pokemon Name:</label>
