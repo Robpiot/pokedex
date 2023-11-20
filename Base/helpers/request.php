@@ -1,6 +1,7 @@
 <?php
 require '../connect.php';
 
+
 if (!function_exists('url')) {
 
     // Define a new 'url' function that takes a string parameter and returns the parsed URL
@@ -62,7 +63,35 @@ if ($method === 'GET') {
     } catch (PDOException $e) {
         // Handle the case where the query fails
         echo "Error: " . $e->getMessage();
-    } {
+    } 
 
+    
+} elseif (count($_POST) > 0) {
+    $isSuccess = 0;
+
+    $userName = $_POST['username'];
+    $sql = "SELECT * FROM users WHERE username= :userName";
+    $statement = $pdo->prepare($sql);
+    $statement->bindParam(':userName', $userName);
+    $statement->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if ($result) {
+        $storedPassword = $result["password"];
+        $userEnteredPassword = $_POST["password"];
+
+        if (hash_equals($storedPassword, hash('sha512', $userEnteredPassword))) {
+            $isSuccess = 1;
+            $_SESSION['user_id'] = $result['id'];
+            $_SESSION['user_name'] = $result['username'];
+        }
+    }
+
+    if ($isSuccess == 0) {
+        header("location:login.php");
+        echo "<div>error wrong password</div>";
+    } else {
+        header("location:../views/index.php");
     }
 }
+?>

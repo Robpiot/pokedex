@@ -18,6 +18,8 @@
                 <li><a href="index.php">Pokemon</a></li>
                 <li><a href="login.php">My Account</a></li>
                 <li><a href="signin.php">Register</a></li>
+                <li><a href="editpkm.php">Editor</a></li>
+                <li><a href="../helpers/logout.php">Logout</a></li>
             </ul>
         </nav>
     </div>
