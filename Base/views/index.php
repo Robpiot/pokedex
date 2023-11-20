@@ -30,8 +30,10 @@ require_once __DIR__ . '/partials/header.php';
         <td><img src="<?php echo $pokemon["img"]?>" alt="<?php echo $pokemon["pkmName"]?>" class = 'pokeImg'></td>
             <td><a href='../views/show.php?name=<?php echo $pokemon["pkmName"]?>' class = 'pokeName'><?php echo $pokemon["pkmName"]?></a></td>
             <td class = 'pokeId'><?php echo $pokemon["id"]?></td>
+            <div class="pokeStats">
             <td class='pokeType1'><?php echo $pokemon["type1"]?></td>
             <td class='pokeType2'><?php echo $pokemon["type2"]?></td>
+        </div>
             <td class="favoriteBtn"><input type="submit" value="Favorite"></td>
             <td class='pokeSubmit'><input type="submit" value="edit"></td>
         </tr> 
