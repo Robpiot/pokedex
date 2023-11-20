@@ -115,6 +115,67 @@ a:hover {
   color: red;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singlepokemon {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 75%;
+  margin-top: 45px;
+  padding: 25px;
+  gap: 30px;
+  border-radius: 15px;
+}
+.singlepokemon h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.singlepokemon .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.singlepokemon .wrapper .current_pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.singlepokemon .wrapper .current_pokemon h1 {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.singlepokemon .wrapper .stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.singlepokemon .wrapper .stats h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.singlepokemon .description h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.singlepokemon .description p {
+  padding-top: 20px;
+}
+.singlepokemon .evolution {
+  display: flex;
+  justify-content: space-around;
+}
+.singlepokemon .evolution div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .registerdiv {
   margin: auto;
   width: 50%;
