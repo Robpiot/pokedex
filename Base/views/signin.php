@@ -27,13 +27,13 @@ try {
   <h2>Register</h2>
   <form method="POST" action="signin.php">
     <label for="username">Username<span class="aste">*</span></label>
-    <input type="text" id="username" name="username" required>
+    <input type="text" id="username" name="username" placeholder="eg. OndineDu38" required>
 
     <label for="email">Email<span class="aste">*</span></label>
-    <input type="email" id="email" name="email" required>
+    <input type="email" id="email" name="email" placeholder="eg. PierreDu76@gmail.com" required>
 
     <label for="password">Password<span class="aste">*</span></label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" placeholder="eg. Bourgp@l3tte#-" required>
 
     <label for="send"></label>
     <input type="submit" id="send" name="send" value="Register">
