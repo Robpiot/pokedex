@@ -62,7 +62,32 @@ if ($method === 'GET') {
     } catch (PDOException $e) {
         // Handle the case where the query fails
         echo "Error: " . $e->getMessage();
-    } {
+    } 
 
+    
+} elseif (count($_POST) > 0) {
+    $isSuccess = 0;
+
+    $userName = $_POST['username'];
+    $sql = "SELECT * FROM users WHERE username= :userName";
+    $statement = $pdo->prepare($sql);
+    $statement->bindParam(':userName', $userName);
+    $statement->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if ($result) {
+        $hashedPassword = $result["password"];
+        if (password_verify($_POST["password"], $hashedPassword)) {
+            $isSuccess = 1;
+        }
+    }
+
+    if ($isSuccess == 0) {
+        echo "<div>error wrong password</div>";
+    } else {
+        echo "<div>good password big bebou</div>";
+
+        exit(); 
     }
 }
+?>

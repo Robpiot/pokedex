@@ -1,4 +1,4 @@
-<?php require './connect.php';
+<?php require '../connect.php';
 require_once __DIR__.'/partials/header.php';
 // Get the data from the form
 try {
