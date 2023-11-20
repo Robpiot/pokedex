@@ -1,4 +1,4 @@
-<?php require './connect.php';
+<?php require '../connect.php';
 require_once __DIR__.'/partials/header.php';
 // Get the data from the form
 try {
@@ -23,12 +23,16 @@ try {
 ?>
 
 
-  <nav>
+<nav>
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="login.php">Login</a></li>
+     
+      <li><a href="login.php">Home</a></li>
       <li><a href="signin.php">Register</a></li>
+      <li><a href="index.php">Pokedex</a></li>
+      <li><a href="editpkm.php">Edit Pokemons</a></li>
+
     </ul>
+  </nav>
   </nav>
   <form method="POST" action="signin.php">
     <label for="username">Username:</label>
