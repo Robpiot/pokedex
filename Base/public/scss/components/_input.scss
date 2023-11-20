@@ -1,6 +1,7 @@
 input[type="text"],
 input[type="number"],
 input[type="password"],
+input[type="email"],
 textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -15,6 +16,7 @@ textarea {
 input[type="text"],
 input[type="number"],
 input[type="password"],
+input[type="email"],
 textarea:focus {
   outline: none;
 }

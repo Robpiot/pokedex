@@ -111,6 +111,41 @@ a:hover {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+.logindiv span {
+  color: red;
+}
+
+.registerdiv {
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.registerdiv label {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.registerdiv input {
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.registerdiv h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.registerdiv span {
+  color: red;
+}
 
 body,
 input,
@@ -149,6 +184,7 @@ input[type=button]:focus {
 input[type=text],
 input[type=number],
 input[type=password],
+input[type=email],
 textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -163,6 +199,7 @@ textarea {
 input[type=text],
 input[type=number],
 input[type=password],
+input[type=email],
 textarea:focus {
   outline: none;
 }/*# sourceMappingURL=style.css.map */

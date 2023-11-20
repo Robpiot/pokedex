@@ -1,5 +1,7 @@
 <?php require '../connect.php';
-require_once __DIR__.'/partials/header.php';
+$title = "Sign up";
+require_once __DIR__ . '/partials/header.php';
+
 // Get the data from the form
 try {
   if (isset($_POST['send'])) {
@@ -21,33 +23,23 @@ try {
 }
 
 ?>
-
-
-<nav>
-    <ul>
-     
-      <li><a href="login.php">Home</a></li>
-      <li><a href="signin.php">Register</a></li>
-      <li><a href="index.php">Pokedex</a></li>
-      <li><a href="editpkm.php">Edit Pokemons</a></li>
-
-    </ul>
-  </nav>
-  </nav>
+<div class="registerdiv">
+  <h2>Register</h2>
   <form method="POST" action="signin.php">
-    <label for="username">Username:</label>
+    <label for="username">Username<span class="aste">*</span></label>
     <input type="text" id="username" name="username" required>
 
-    <label for="email">Email:</label>
+    <label for="email">Email<span class="aste">*</span></label>
     <input type="email" id="email" name="email" required>
 
-    <label for="password">Password:</label>
+    <label for="password">Password<span class="aste">*</span></label>
     <input type="password" id="password" name="password" required>
 
     <label for="send"></label>
     <input type="submit" id="send" name="send" value="Register">
 
   </form>
-  <?php 
-require_once __DIR__.'/partials/footer.php';
+</div>
+<?php
+require_once __DIR__ . '/partials/footer.php';
 ?>
