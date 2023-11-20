@@ -3,6 +3,22 @@
     margin: 0;
 
 }
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+.userName {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 20px;
+}
 .container {
     display : grid;
     grid-template-columns: 33% 33% 33%;
@@ -20,7 +36,7 @@
     justify-content: center;
     height: 40vh;
     width :30vw;
-   border-radius: 5px;
+    border-radius: 5px;
     margin : 10px;
 }
 .pokeName {
@@ -40,7 +56,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around; 
-    width: 100%;
+    width: 50%;
     margin: 10px; 
     padding : 10px;
 }
+
+

@@ -3,25 +3,18 @@ require "../helpers/request.php";
 $title = "Home";
 require_once __DIR__ . '/partials/header.php';
 ?>
-<!-- 
-<script defer src="../jsscripts/search.js"></script> -->
 
-
-<nav>
-    <ul>
-     
-      <li><a href="login.php">Home</a></li>
-      <li><a href="signin.php">Register</a></li>
-      <li><a href="index.php">Pokedex</a></li>
-      <li><a href="editpkm.php">Edit Pokemons</a></li>
-
-    </ul>
-  </nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex - Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="../jsscripts/changeIcon.js"></script>
 
 <main>
-    <input type="search" id="search">
+    
     <h1>Pokedex - Homepage</h1>
-    <p>Hello  <strong><?php echo ['name'] ?></p></strong>
+    <p class="userName">Hello  <strong><?php echo ['name'] ?></p></strong>
     <div class="container">
     <table>
         
@@ -34,11 +27,8 @@ require_once __DIR__ . '/partials/header.php';
                 <p class='pokeType1'><?php echo $pokemon["type1"]?></p>
                 <p class='pokeType2'><?php echo $pokemon["type2"]?></p>
                 </div>
-                <div class="buttons">
-                <button class="favoriteBtn"><input type="submit" value="Favorite"></button>
-             <button><input type="submit" value="edit" class = "pokeSubmit"></button>
-
-                </div>
+                
+                <button type="submit" id='GFG' class="favIcon" value="favorite" ><i class="fa-solid fa-heart" style="color: #000000;"></i></button>
             
         </div> 
         <?php endforeach; ?> 
