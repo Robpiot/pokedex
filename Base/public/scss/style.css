@@ -83,6 +83,35 @@ a:hover {
   border-bottom: 2px solid #fddf42;
 }
 
+.logindiv {
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.logindiv label {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.logindiv input {
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.logindiv h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 body,
 input,
 textarea,
@@ -91,9 +120,30 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-input[type=submit]:hover, button:hover, input[type=button]:hover {
+input[type=submit],
+button,
+input[type=button] {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 15%;
+  font-weight: bold;
+}
+input[type=submit]:hover,
+button:hover,
+input[type=button]:hover {
   cursor: pointer;
   scale: 1.1;
+}
+input[type=submit]:active,
+button:active,
+input[type=button]:active {
+  scale: 0.9;
+}
+input[type=submit]:focus,
+button:focus,
+input[type=button]:focus {
+  outline: none;
 }
 
 input[type=text],
@@ -103,10 +153,8 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  width: 60%;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
   color: #000;
   background-color: #e5e7eb;
   transition: 0.3s;
