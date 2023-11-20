@@ -27,6 +27,6 @@ L'application Pokedex est une application web complète qui permet aux utilisate
 
 ## Auteurs
 
-![https://github.com/Valentin-Lefort]
-![https://github.com/PierreMarien]
-![https://github.com/Robpiot]
+- [Valentin Lefort](https://github.com/Valentin-Lefort)
+- [Pierre Marien](https://github.com/PierreMarien)
+- [Robien Piot](https://github.com/Robpiot)
