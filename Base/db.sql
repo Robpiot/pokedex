@@ -42,7 +42,7 @@ CREATE Table `stats` (
 );
 
 INSERT INTO `users` (`id`,`username`,`password`,`email`)
-VALUES ('1','DracaufeuDu69','SouleveurDeTortank','Sachatte@gmail.com');
+VALUES ('1','DracaufeuDu69','abc9cdee0d7a88eb000f26d1b3b8e60c806a86b15560809fda54d4ffe64656f36054b96bd3373472c670094e37bdcdda6ef7c43f12a79539b954cd9962362663','Sachatte@gmail.com');
 
 INSERT INTO `pokedex` (`id`,`pkmName`,`type1`,`type2`,`evolution1`,`evolution2`,`bio`,`img`)
 VALUES 

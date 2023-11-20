@@ -1,6 +1,7 @@
 <?php
 require '../connect.php';
 
+
 if (!function_exists('url')) {
 
     // Define a new 'url' function that takes a string parameter and returns the parsed URL
@@ -90,10 +91,7 @@ if ($method === 'GET') {
         header("location:login.php");
         echo "<div>error wrong password</div>";
     } else {
-        
-        echo "<div>good password big bebou</div>";
-        header("location:../views/login.php");
-        exit(); 
+        header("location:../views/index.php");
     }
 }
 ?>

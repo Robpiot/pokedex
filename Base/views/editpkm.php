@@ -1,4 +1,7 @@
-<?php require_once __DIR__.'/partials/header.php'; ?> 
+<?php require_once __DIR__.'/partials/header.php'; 
+require '../helpers/sessionAdmin.php';
+?> 
+
 
 <nav>
     <ul>
