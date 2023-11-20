@@ -1,0 +1,6 @@
+input[type=submit],button,input[type=button] {
+    &:hover{
+        cursor: pointer;
+        scale: 1.1;
+    }
+}

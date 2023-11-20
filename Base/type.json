@@ -1,0 +1,121 @@
+[
+  {
+    "name": "------------"
+  },
+  {
+    "name": "Normal",
+    "immunes": ["Spectre"],
+    "weaknesses": ["Roche", "Acier"],
+    "strengths": []
+  },
+  {
+    "name": "Feu",
+    "immunes": [],
+    "weaknesses": ["Feu", "Eau", "Roche", "Dragon"],
+    "strengths": ["Plante", "Glace", "Insecte", "Acier"]
+  },
+  {
+    "name": "Eau",
+    "immunes": [],
+    "weaknesses": ["Eau", "Plante", "Dragon"],
+    "strengths": ["Feu", "Sol", "Roche"]
+  },
+  {
+    "name": "Électrik",
+    "immunes": ["Sol"],
+    "weaknesses": ["Électrik", "Plante", "Dragon"],
+    "strengths": ["Eau", "Vol"]
+  },
+  {
+    "name": "Plante",
+    "immunes": [],
+    "weaknesses": [
+      "Feu",
+      "Plante",
+      "Poison",
+      "Vol",
+      "Insecte",
+      "Dragon",
+      "Acier"
+    ],
+    "strengths": ["Eau", "Sol", "Roche"]
+  },
+  {
+    "name": "Glace",
+    "immunes": [],
+    "weaknesses": ["Feu", "Eau", "Glace", "Acier"],
+    "strengths": ["Plante", "Sol", "Vol", "Dragon"]
+  },
+  {
+    "name": "Combat",
+    "immunes": ["Spectre"],
+    "weaknesses": ["Poison", "Vol", "Psy", "Insecte", "Fée"],
+    "strengths": ["Normal", "Glace", "Roche", "Ténèbre", "Acier"]
+  },
+  {
+    "name": "Poison",
+    "immunes": ["Acier"],
+    "weaknesses": ["Poison", "Sol", "Roche", "Spectre"],
+    "strengths": ["Plante", "Fée"]
+  },
+  {
+    "name": "Sol",
+    "immunes": ["Vol"],
+    "weaknesses": ["Plante", "Insecte"],
+    "strengths": ["Feu", "Électrik", "Poison", "Roche", "Acier"]
+  },
+  {
+    "name": "Vol",
+    "immunes": [],
+    "weaknesses": ["Électrik", "Roche", "Acier"],
+    "strengths": ["Plante", "Combat", "Insecte"]
+  },
+  {
+    "name": "Psy",
+    "immunes": ["Ténèbre"],
+    "weaknesses": ["Psy", "Acier"],
+    "strengths": ["Combat", "Poison"]
+  },
+  {
+    "name": "Insecte",
+    "immunes": [],
+    "weaknesses": ["Feu", "Combat", "Poison", "Vol", "Spectre", "Acier", "Fée"],
+    "strengths": ["Plante", "Psy", "Ténèbre"]
+  },
+  {
+    "name": "Roche",
+    "immunes": [],
+    "weaknesses": ["Combat", "Sol", "Acier"],
+    "strengths": ["Feu", "Glace", "Vol", "Insecte"]
+  },
+  {
+    "name": "Spectre",
+    "immunes": ["Normal"],
+    "weaknesses": ["Ténèbre"],
+    "strengths": ["Psy", "Spectre"]
+  },
+  {
+    "name": "Dragon",
+    "immunes": ["Fée"],
+    "weaknesses": ["Acier"],
+    "strengths": ["Dragon"]
+  },
+  {
+    "name": "Ténèbre",
+    "immunes": [],
+    "weaknesses": ["Combat", "Ténèbre", "Fée"],
+    "strengths": ["Psy", "Spectre"]
+  },
+  {
+    "name": "Acier",
+    "immunes": [],
+    "weaknesses": ["Feu", "Eau", "Électrik", "Acier"],
+    "strengths": ["Glace", "Roche", "Fée"]
+  },
+  {
+    "name": "Fée",
+    "immunes": [],
+    "weaknesses": ["Feu", "Poison", "Acier"],
+    "strengths": ["Combat", "Dragon", "Ténèbre"]
+  }
+]

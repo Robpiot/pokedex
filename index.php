@@ -12,6 +12,7 @@ ini_set("display_errors", 1);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="./jsscripts/search.js"></script>
   <title>Pokedex</title>
+  <link href="/public/scss/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
   <nav>
