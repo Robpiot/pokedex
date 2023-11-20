@@ -1,52 +1,32 @@
-# Pokedex 
+# Introduction
 
-- Repository name: `Pokedex`
-- Mode : `Team of 4 ppl`
-- Type of challenge : `Consolidation`
-- Duration : `3 days`
-- Form submition: 
+L'application Pokedex est une application web développée en PHP procédural. Elle permet aux utilisateurs de visualiser une liste de Pokémon, de voir les détails de chaque Pokémon et de sauvegarder leurs Pokémon préférés.
 
-## Teams
-- Group 1: Tim, Carole, Justine, Rosalie
-- Group 2: Virginie, Alexandre Vandewiele, Thomas, Justin
-- Group 3: Elodie, Lidwine, Lucas, Layla
-- Group 4: Bastien, Alexandre Vens, Antoine, Elisabeth
-- Group 5: Mathias, Okly, Stéphane, Kimi
-- Group 6: Valentin, Pierre, Robin
+## Fonctionnalités
 
-## Learning Objectives
-- PHP Procedural Programming: Develop proficiency in PHP procedural programming by building a functional Pokedex application.
-- Database Integration: Learn to interact with a database to store and retrieve user information, favorite Pokemon, and Pokemon details.
-- User Authentication: Implement a secure login and registration system to allow users to save their favorite Pokemon.
-- Dynamic Web Pages: Understand how to create dynamic web pages that display a list of Pokemon and their details based on user interactions.
+La page d'accueil affiche une liste de Pokémon. En cliquant sur un Pokémon, l'utilisateur est redirigé vers une page de détails qui affiche des informations sur le Pokémon sélectionné.
 
-## Your mission
-Develop a Pokedex application using PHP procedural programming. The application should have an index.php page displaying a list of Pokemon. Users should be able to click on a Pokemon to view its details and evolution. Additionally, implement an user authentication system with a login and registration page, allowing users to save their favorite Pokemon.
+La page shows affiche des informations sur le Pokémon sélectionné, y compris ses statistiques, son type et ses évolutions.
 
-## Must have 
-- Index Page (index.php):
-    - Display a list of Pokemons.
-    - Clicking on a Pokemon should lead to a details page.
+## Authentification des utilisateurs
 
-- Details Page:
-    - Show information about the selected Pokemon.
-    - Display the Pokemon's evolution details.
+L'application Pokedex comprend un système d'authentification des utilisateurs. Les utilisateurs peuvent s'inscrire et se connecter à l'application. Une fois connectés, ils peuvent sauvegarder leurs Pokémon préférés et les visualiser plus tard.
 
-- User Authentication:
-    - Implement a secure login and registration system.
-    - Allow users to save and view their favorite Pokemon.
+## Fonctionnalités supplémentaires
 
-## Nice to have
+Tableau de bord administrateur
+Le tableau de bord administrateur est accessible uniquement aux administrateurs. Il permet aux administrateurs d'ajouter de nouveaux Pokémon à la Pokedex.
 
-- Admin Dashboard:
-    - Create an admin dashboard accessible only to administrators.
-    - Allow admins to add new Pokemon to the Pokedex.
-    
-- User Profiles:
-    - Enable users to create profiles with additional information (avatar, bio, etc.).
+## Profils d'utilisateurs
 
-- Search Functionality:
-    - Implement a search feature on the index page for users to find specific Pokemon.
+Les utilisateurs peuvent créer des profils avec des informations supplémentaires, comme un avatar et une biographie.
 
+## Conclusion
 
-![](https://i.gifer.com/BueK.gif)
+L'application Pokedex est une application web complète qui permet aux utilisateurs de visualiser et de sauvegarder leurs Pokémon préférés. Elle comprend également des fonctionnalités supplémentaires, comme un tableau de bord administrateur.
+
+## Auteurs
+
+![https://github.com/Valentin-Lefort]
+![https://github.com/PierreMarien]
+![https://github.com/Robpiot]
