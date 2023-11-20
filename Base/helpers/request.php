@@ -76,17 +76,23 @@ if ($method === 'GET') {
     $result = $statement->fetch(PDO::FETCH_ASSOC);
 
     if ($result) {
-        $hashedPassword = $result["password"];
-        if (password_verify($_POST["password"], $hashedPassword)) {
+        $storedPassword = $result["password"];
+        $userEnteredPassword = $_POST["password"];
+
+        if (hash_equals($storedPassword, hash('sha512', $userEnteredPassword))) {
             $isSuccess = 1;
+            $_SESSION['user_id'] = $result['id'];
+            $_SESSION['user_name'] = $result['username'];
         }
     }
 
     if ($isSuccess == 0) {
+        header("location:login.php");
         echo "<div>error wrong password</div>";
     } else {
+        
         echo "<div>good password big bebou</div>";
-
+        header("location:../views/login.php");
         exit(); 
     }
 }

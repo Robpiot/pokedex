@@ -1,4 +1,5 @@
 <?php 
+require '../helpers/sessionStart.php';
 require '../helpers/request.php';
 $title = $_GET['name'];
 require_once __DIR__.'./partials/header.php';
