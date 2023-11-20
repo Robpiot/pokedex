@@ -89,7 +89,8 @@ a:hover {
 }
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
   justify-self: center;
   align-items: center;
   justify-content: center;
@@ -125,8 +126,11 @@ a:hover {
 
 .pokeStats {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
 }
 
 body,

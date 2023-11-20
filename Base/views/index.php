@@ -26,19 +26,23 @@ require_once __DIR__ . '/partials/header.php';
     <table>
         
         <?php foreach ($data as $pokemon): ?>
-        <tr class="card">
-        <td><img src="<?php echo $pokemon["img"]?>" alt="<?php echo $pokemon["pkmName"]?>" class = 'pokeImg'></td>
-            <td><a href='../views/show.php?name=<?php echo $pokemon["pkmName"]?>' class = 'pokeName'><?php echo $pokemon["pkmName"]?></a></td>
-            <td class = 'pokeId'><?php echo $pokemon["id"]?></td>
+        <div class="card">
+        <figure><img src="<?php echo $pokemon["img"]?>" alt="<?php echo $pokemon["pkmName"]?>" class = 'pokeImg'></figure>
+            <h2><a href='../views/show.php?name=<?php echo $pokemon["pkmName"]?>' class = 'pokeName'><?php echo $pokemon["pkmName"]?></a></h2>
+            <h3 class = 'pokeId'><?php echo $pokemon["id"]?></h3>
             <div class="pokeStats">
-            <td class='pokeType1'><?php echo $pokemon["type1"]?></td>
-            <td class='pokeType2'><?php echo $pokemon["type2"]?></td>
-        </div>
-            <td class="favoriteBtn"><input type="submit" value="Favorite"></td>
-            <td class='pokeSubmit'><input type="submit" value="edit"></td>
-        </tr> 
+                <p class='pokeType1'><?php echo $pokemon["type1"]?></p>
+                <p class='pokeType2'><?php echo $pokemon["type2"]?></p>
+                </div>
+                <div class="buttons">
+                <button class="favoriteBtn"><input type="submit" value="Favorite"></button>
+             <button><input type="submit" value="edit" class = "pokeSubmit"></button>
+
+                </div>
+            
+        </div> 
         <?php endforeach; ?> 
-    </table>   
+      
 
     </div>
    
