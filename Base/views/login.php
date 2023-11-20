@@ -1,16 +1,10 @@
 <?php 
 error_reporting(E_ALL);
-ini_set("display_errors", 1); ?>
+ini_set("display_errors", 1); 
+require_once __DIR__ . '/partials/header.php';
+?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link href="/public/scss/style.css" type="text/css" rel="stylesheet">
-</head>
-<body>
+
 <nav>
     <ul>
       <li><a href="index.php">Home</a></li>
@@ -27,5 +21,6 @@ ini_set("display_errors", 1); ?>
 
     <button type="submit">Log in</button>
   </form>
-</body>
-</html>
+  <?php 
+require_once __DIR__.'/partials/footer.php';
+?>

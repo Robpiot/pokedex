@@ -1,4 +1,4 @@
-
+<?php require_once __DIR__ . '/partials/header.php'; ?>
 <?php
 require '../helpers/request.php';
 
@@ -100,3 +100,4 @@ try {
   die('Erreur : ' . $e->getMessage());
 };
 ?>
+<?php require_once __DIR__ . '/partials/footer.php';?>
