@@ -4,9 +4,21 @@ $title = "Home";
 require_once __DIR__ . '/partials/header.php';
 ?>
 
+
+<nav>
+    <ul>
+     
+      <li><a href="login.php">Home</a></li>
+      <li><a href="signin.php">Register</a></li>
+      <li><a href="index.php">Pokedex</a></li>
+      <li><a href="editpkm.php">Edit Pokemons</a></li>
+
+    </ul>
+  </nav>
+
 <main>
     <h1>Pokedex - Homepage</h1>
-    <p>Hello  <strong><?php echo $user['name'] ?></p></strong>
+    <p>Hello  <strong><?php echo ['name'] ?></p></strong>
     <table>
         <tr>
             <th>Pokemon</th>

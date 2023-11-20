@@ -9,9 +9,12 @@ require_once __DIR__ . '/partials/header.php';
 
 <nav>
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="login.php">Login</a></li>
+     
+      <li><a href="login.php">Home</a></li>
       <li><a href="signin.php">Register</a></li>
+      <li><a href="index.php">Pokedex</a></li>
+      <li><a href="editpkm.php">Edit Pokemons</a></li>
+
     </ul>
   </nav>
   <form method="POST" action="login.php">
