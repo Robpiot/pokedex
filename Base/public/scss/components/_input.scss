@@ -1,3 +1,22 @@
-input[type=text],input[type=number],input[type=password],textarea {
-    
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #000;
+  background-color: #e5e7eb;
+  transition: 0.3s;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea:focus {
+  outline: none;
 }

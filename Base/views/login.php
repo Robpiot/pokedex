@@ -1,32 +1,24 @@
-<?php 
+<?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1); 
 session_start();
 require "../helpers/request.php";
-
+$title = "Login";
 require_once __DIR__ . '/partials/header.php';
 ?>
 
-
-<nav>
-    <ul>
-     
-      <li><a href="login.php">Home</a></li>
-      <li><a href="signin.php">Register</a></li>
-      <li><a href="index.php">Pokedex</a></li>
-      <li><a href="editpkm.php">Edit Pokemons</a></li>
-
-    </ul>
-  </nav>
+<div class="logindiv">
+  <h2>My Account</h2>
   <form method="POST" action="login.php">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <label for="username">Username <span class="aste">*</span></label>
+    <input type="text" id="username" name="username" placeholder="eg. OndineDu38" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <label for="password">Password <span class="aste">*</span></label>
+    <input type="password" id="password" name="password" placeholder="My password" required>
 
-    <button type="submit">Log in</button>
+    <button type="submit">Connexion</button>
   </form>
-  <?php 
-require_once __DIR__.'/partials/footer.php';
+</div>
+<?php
+require_once __DIR__ . '/partials/footer.php';
 ?>

@@ -1,0 +1,34 @@
+.logopkm {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .logo {
+    width: 300px;
+  }
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+.nav {
+  font-size: large;
+  .navlogin {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 15px;
+      padding: 20px;
+      background-color: white;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  border-bottom: 2px solid #fddf42;
+}
