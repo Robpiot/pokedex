@@ -1,22 +1,8 @@
 <?php require_once __DIR__ . '/partials/header.php';
 require '../helpers/sessionAdmin.php';
 ?>
-
-
-<nav>
-  <ul>
-
-    <li><a href="login.php">Home</a></li>
-    <li><a href="signin.php">Register</a></li>
-    <li><a href="index.php">Pokedex</a></li>
-    <li><a href="editpkm.php">Edit Pokemons</a></li>
-
-  </ul>
-</nav>
-
 <?php
-$title = "Edit Pokemon";
-require_once __DIR__ . '/partials/header.php'; ?>
+$title = "Edit Pokemon"; ?>
 
 <form method="POST" action="index.php">
   <label for="pkmName">Pokemon Name:</label>
@@ -48,8 +34,6 @@ require_once __DIR__ . '/partials/header.php'; ?>
 </form>
 
 <?php
-$title = "Edit Pokemon";
-require_once __DIR__ . '/partials/header.php';
 
 require '../helpers/request.php';
 
@@ -70,8 +54,8 @@ if (isset($_POST['selectPokemonBtn'])) {
 
   $selectedPokemonId = $_POST['pkmId'];
 
-  $sql2 = "SELECT * FROM pokedex INNER JOIN stats on pkm_id=id WHERE id = ?";
-  $stmt = $pdo->prepare($sql2);
+  $sql = "SELECT * FROM pokedex INNER JOIN stats on pkm_id=id WHERE id = ?";
+  $stmt = $pdo->prepare($sql);
   $stmt->execute([$selectedPokemonId]);
   $selectedPokemon = $stmt->fetch(PDO::FETCH_ASSOC);
 
