@@ -66,7 +66,7 @@ if ($method === 'GET') {
     } 
 
     
-} elseif (count($_POST) > 0) {
+} elseif (isset($_POST['login'])) {
     $isSuccess = 0;
 
     $userName = $_POST['username'];

@@ -9,24 +9,27 @@ require_once __DIR__.'./partials/header.php';
     <h1>
         <?php echo $_GET['name'];?>
     </h1>
-    <a href="/">Homepage</a>
     <div>
         <figure>
             <img src="<?php echo $SelectedPkmData['img']?>" alt="<?php $SelectedPkmData['pkmName']?>">
         </figure>
-        <?php if (!empty($evolution1Data)) : ?>
-    <div>
-        <img src="<?php echo $evolution1Data['img']; ?>" alt="<?php echo $evolution1Data['pkmName']; ?>">
-        <p><?php echo $evolution1Data['pkmName']; ?></p>
-    </div>
-        <?php endif; ?>
+        <div>
+            <h2>Stats</h2>
+            <p><?php echo $SelectedPkmData['']?></p>
+        </div>
+            <?php if (!empty($evolution1Data)) : ?>
+        <div>
+            <img src="<?php echo $evolution1Data['img']; ?>" alt="<?php echo $evolution1Data['pkmName']; ?>">
+            <p><?php echo $evolution1Data['pkmName']; ?></p>
+        </div>
+            <?php endif; ?>
 
-        <?php if (!empty($evolution2Data)) : ?>
-    <div>
-        <img src="<?php echo $evolution2Data['img']; ?>" alt="<?php echo $evolution2Data['pkmName']; ?>">
-        <p><?php echo $evolution2Data['pkmName']; ?></p>
-    </div>
-        <?php endif; ?>
+            <?php if (!empty($evolution2Data)) : ?>
+        <div>
+            <img src="<?php echo $evolution2Data['img']; ?>" alt="<?php echo $evolution2Data['pkmName']; ?>">
+            <p><?php echo $evolution2Data['pkmName']; ?></p>
+        </div>
+            <?php endif; ?>
 
     </div>
     
