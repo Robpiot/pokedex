@@ -100,4 +100,4 @@ try {
   die('Erreur : ' . $e->getMessage());
 };
 ?>
-<?php require_once __DIR__ . '/partials/footer.php';?>
+<?php require_once __DIR__ . '/partials/footer.php'; ?>
