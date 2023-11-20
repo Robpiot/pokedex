@@ -1,4 +1,5 @@
 <?php require '../connect.php';
+session_start();
 $title = "Sign up";
 require_once __DIR__ . '/partials/header.php';
 

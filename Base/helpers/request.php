@@ -1,6 +1,7 @@
 <?php
 require '../connect.php';
 
+
 if (!function_exists('url')) {
 
     // Define a new 'url' function that takes a string parameter and returns the parsed URL
@@ -60,48 +61,78 @@ if ($method === 'GET') {
     } catch (PDOException $e) {
         // Handle the case where the query fails
         echo "Error: " . $e->getMessage();
-    } {
     }
-} elseif ($method === 'POST') {
-    try {
-        if (isset($_POST['editPokemonBtn'])) {
-            $id = $_POST['pkmId'];
-            $pkname = $_POST['pkmName'];
-            $bio = $_POST['bio'];
-            $evo1 = $_POST['evo1'];
-            $evo2 = $_POST['evo2'];
-            $type1 = $_POST['type1'];
-            $type2 = $_POST['type2'];
-            $hp = $_POST['hp'];
-            $atk = $_POST['atk'];
-            $def = $_POST['def'];
-            $sAtk = $_POST['sAtk'];
-            $sDef = $_POST['sDef'];
-            $speed = $_POST['speed'];
-            $img = $_POST['img'];
+} elseif (count($_POST) > 0) {
+    $isSuccess = 0;
 
-            $stmt = $pdo->prepare("UPDATE pokedex , stats SET pkmName=:pkname, bio=:bio, evolution1=:evo1, evolution2=:evo2, type1=:type1, type2=:type2, hp=:hp, atk=:atk, def=:def, atk_spe=:sAtk, def_spe=:sDef, speed=:speed, img=:img WHERE id=:id");
+    $userName = $_POST['username'];
+    $sql = "SELECT * FROM users WHERE username= :userName";
+    $statement = $pdo->prepare($sql);
+    $statement->bindParam(':userName', $userName);
+    $statement->execute();
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
 
-            $stmt->bindParam(':id', $id);
-            $stmt->bindParam(':pkname', $pkname);
-            $stmt->bindParam(':bio', $bio);
-            $stmt->bindParam(':evo1', $evo1);
-            $stmt->bindParam(':evo2', $evo2);
-            $stmt->bindParam(':type1', $type1);
-            $stmt->bindParam(':type2', $type2);
-            $stmt->bindParam(':hp', $hp);
-            $stmt->bindParam(':atk', $atk);
-            $stmt->bindParam(':def', $def);
-            $stmt->bindParam(':sAtk', $sAtk);
-            $stmt->bindParam(':sDef', $sDef);
-            $stmt->bindParam(':speed', $speed);
-            $stmt->bindParam(':img', $img);
-            $stmt->execute();
+    if ($result) {
+        $storedPassword = $result["password"];
+        $userEnteredPassword = $_POST["password"];
 
-            header('Location: editpkm.php');
+        if (hash_equals($storedPassword, hash('sha512', $userEnteredPassword))) {
+            $isSuccess = 1;
+            $_SESSION['user_id'] = $result['id'];
+            $_SESSION['user_name'] = $result['username'];
         }
-    } catch (Exception $e) {
-        // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : ' . $e->getMessage());
     }
+
+    if ($isSuccess == 0) {
+        header("location:login.php");
+        echo "<div>error wrong password</div>";
+    } else {
+        header("location:../views/index.php");
+    }
+}
+?>
+} {
+}
+} elseif ($method === 'POST') {
+try {
+if (isset($_POST['editPokemonBtn'])) {
+$id = $_POST['pkmId'];
+$pkname = $_POST['pkmName'];
+$bio = $_POST['bio'];
+$evo1 = $_POST['evo1'];
+$evo2 = $_POST['evo2'];
+$type1 = $_POST['type1'];
+$type2 = $_POST['type2'];
+$hp = $_POST['hp'];
+$atk = $_POST['atk'];
+$def = $_POST['def'];
+$sAtk = $_POST['sAtk'];
+$sDef = $_POST['sDef'];
+$speed = $_POST['speed'];
+$img = $_POST['img'];
+
+$stmt = $pdo->prepare("UPDATE pokedex , stats SET pkmName=:pkname, bio=:bio, evolution1=:evo1, evolution2=:evo2, type1=:type1, type2=:type2, hp=:hp, atk=:atk, def=:def, atk_spe=:sAtk, def_spe=:sDef, speed=:speed, img=:img WHERE id=:id");
+
+$stmt->bindParam(':id', $id);
+$stmt->bindParam(':pkname', $pkname);
+$stmt->bindParam(':bio', $bio);
+$stmt->bindParam(':evo1', $evo1);
+$stmt->bindParam(':evo2', $evo2);
+$stmt->bindParam(':type1', $type1);
+$stmt->bindParam(':type2', $type2);
+$stmt->bindParam(':hp', $hp);
+$stmt->bindParam(':atk', $atk);
+$stmt->bindParam(':def', $def);
+$stmt->bindParam(':sAtk', $sAtk);
+$stmt->bindParam(':sDef', $sDef);
+$stmt->bindParam(':speed', $speed);
+$stmt->bindParam(':img', $img);
+$stmt->execute();
+
+header('Location: editpkm.php');
+}
+} catch (Exception $e) {
+// En cas d'erreur, on affiche un message et on arrête tout
+die('Erreur : ' . $e->getMessage());
+}
 };
