@@ -115,70 +115,65 @@ a:hover {
   color: red;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: capitalize;
-  margin: 20px;
-}
-
-.userName {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: capitalize;
-  margin: 20px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  justify-self: center;
+main {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
-.card {
-  background-color: white;
+.singlepokemon {
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  align-items: center;
-  justify-content: center;
-  height: 40vh;
-  width: 30vw;
-  border-radius: 5px;
-  margin: 10px;
+  background-color: white;
+  width: 75%;
+  margin-top: 45px;
+  padding: 25px;
+  gap: 30px;
+  border-radius: 15px;
 }
-
-.pokeName {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: capitalize;
+.singlepokemon h2 {
+  font-weight: 500;
   text-align: center;
 }
-
-.pokeImg {
-  position: relative;
-  justify-content: center;
-  width: 150px;
-  height: 150px;
-}
-
-.pokeStats {
+.singlepokemon .wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  width: 50%;
-  margin: 10px;
-  padding: 10px;
+}
+.singlepokemon .wrapper .current_pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.singlepokemon .wrapper .current_pokemon h1 {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.singlepokemon .wrapper .stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.singlepokemon .wrapper .stats h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.singlepokemon .description h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.singlepokemon .description p {
+  padding-top: 20px;
+}
+.singlepokemon .evolution {
+  display: flex;
+  justify-content: space-around;
+}
+.singlepokemon .evolution div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .registerdiv {

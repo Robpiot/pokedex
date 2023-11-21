@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-ini_set("display_errors", 1); 
+ini_set("display_errors", 1);
 session_start();
 require "../helpers/request.php";
 $title = "Login";
@@ -16,7 +16,7 @@ require_once __DIR__ . '/partials/header.php';
     <label for="password">Password <span class="aste">*</span></label>
     <input type="password" id="password" name="password" placeholder="My password" required>
 
-    <button type="submit">Connexion</button>
+    <button type="submit" name="login">Connexion</button>
   </form>
 </div>
 <?php
